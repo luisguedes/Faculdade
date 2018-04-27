@@ -1,0 +1,16 @@
+package br.com.rest.tabuada;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+
+public class TabuadaResource {
+
+	@GET
+	@Path("tabuada/{param1}")
+	public String tabuada(@PathParam("param1") int a){
+		String out = String.valueOf(a);
+		return out;
+}
+
+}

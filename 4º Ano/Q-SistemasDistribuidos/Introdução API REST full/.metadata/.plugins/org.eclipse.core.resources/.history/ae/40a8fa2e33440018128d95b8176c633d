@@ -1,0 +1,20 @@
+package br.com.rest.tabuada;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+
+@Path("exercicio2")
+public class TabuadaResource {
+
+	@GET
+	@Path("tabuada/{param1}")
+	public String tabuada(@PathParam("param1") int tabuada){
+		for(int x = 0; x <= 10; x++) {
+		String out = String.valueOf(tabuada=tabuada*x);
+		return out;
+		}
+		return null;
+		
+}
+}

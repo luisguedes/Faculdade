@@ -1,0 +1,20 @@
+package br.com.rest.exercicio3;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+
+//http://localhost:8080/Exercicio3/rest/exercicio3/show=teste
+
+@Path("exercicio3")
+public class Exercicio3Resource {
+
+	@GET
+	@Path("imc/n={param1}/i={param2}/m={param3}/a={param4}")
+	public String imc(@PathParam("param1") String nome, @PathParam("param2") int idade, @PathParam("param3") int massa, @PathParam("param4") int altura) {
+		int resultado = massa*altura^2;
+		String out = nome + "Seu IMC eh: " + resultado + "<br>";
+		return out;
+	}
+
+}
