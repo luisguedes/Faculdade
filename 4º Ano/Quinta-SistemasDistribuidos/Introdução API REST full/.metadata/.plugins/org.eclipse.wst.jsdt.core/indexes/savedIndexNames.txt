@@ -1,9 +1,0 @@
-INDEX VERSION 1.4+F:\faculdade\andre\Sistemas Distribuidos\Introdução API REST full\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3763726863.index
-3160554808.index
-3740775801.index
-3281912057.index
-2538789529.index
-87109459.index
-4245973592.index
-1828912081.index
