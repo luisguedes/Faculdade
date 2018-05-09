@@ -24,3 +24,9 @@ where linha.nome = 'Rodoviária / TCI' ORDER BY CASE quadro_hora.dia when 'Domin
 --mostrar site sqlfiddle.com/#!9/a132c4c/1
 
 --4.Obter as linhas de ônibus/empresa que passam por um determinado logradouro, dado o nome desse logradouro.
+ Select empresa.nome as Nome_da_Empresa, linha.nome as Nome_da_linha, linha.numero as Numero_da_Linha, logradouro.nome as Nome_do_Logradouro from linha 
+ inner join itinerario on itinerario.numerolinha = linha.numero
+ inner join quadro_hora on quadro_hora.numero_linha = linha.numero
+ inner join empresa on empresa.cnpj = cnpj_empresa
+ inner join logradouro on logradouro.codigo = codigolog
+ where logradouro.nome = 'Rua Papini Junior' order by empresa.nome
