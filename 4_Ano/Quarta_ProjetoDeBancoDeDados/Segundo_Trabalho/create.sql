@@ -1,11 +1,11 @@
-CREATE TABLE empresa (
+﻿CREATE TABLE empresa (
 	cnpj varchar (100) not null primary key,
 	nome varchar (100) not null,
 	telefone varchar (100) not null,
 	website varchar (100) not null,
 	end_cidade varchar (100) not null,
 	end_bairro varchar (100) not null,
-    end_logradouro varchar (100) not null,
+    	end_logradouro varchar (100) not null,
 	end_numero varchar (100) not null,
 	end_cep varchar (100) not null,
 
