@@ -7,9 +7,9 @@ insert into empresa values (20987765123, 'Empresa Cruz', 1633351728, 'www.empres
 
 ------------- Populate Linhas ------------- OK
 -- insert into linha values (numero, nome);
-insert into linha values (30, 'Rodoviária / TCI');
-insert into linha values (20, 'Fonte/Jardim das Estações');
-insert into linha values (10, 'Jardim Santa Lúcia');
+insert into linha values ('Rodoviária / TCI');
+insert into linha values ('Fonte/Jardim das Estações');
+insert into linha values ('Jardim Santa Lúcia');
 --teste de erro (numero ou nome da linha igual) OK
 --insert into linha values (10, 'Jardim Santa Lúcio');
 
@@ -26,28 +26,31 @@ insert into logradouro values ('Rua Palmeiras sem mundial');
 --teste de erro (nome igual) OK
 --insert into logradouro values ('Rua Palmeiras sem mundial');
 
-------------- Populate grade_hora -------------
--- insert into grade_hora values (cnpj_empresa, numero_linha, dia, hora)
-insert into quadro_hora values (32156778902, 10, 'Segunda-Feira', '12:00');
-insert into quadro_hora values (32156778902, 20, 'Terça-Feira', '10:00');
-insert into quadro_hora values (20987765123, 10, 'Quarta-Feira', '10:20');
-insert into quadro_hora values (20987765123, 30, 'Sexta-Feira', '19:00');
+------------- Populate quadro_hora -------------
+-- insert into quadro_hora values (cnpj_empresa, numero_linha, dia, hora)
+insert into quadro_hora values (32156778902, 1, 'Segunda-Feira', '12:00');
+insert into quadro_hora values (32156778902, 2, 'Terça-Feira', '10:00');
+insert into quadro_hora values (32156778902, 1, 'Quarta-Feira', '13:00');
+insert into quadro_hora values (32156778902, 1, 'Quinta-Feira', '16:00');
+insert into quadro_hora values (32156778902, 1, 'Sexta-Feira', '13:00');
+insert into quadro_hora values (20987765123, 1, 'Quarta-Feira', '10:20');
+insert into quadro_hora values (20987765123, 3, 'Sexta-Feira', '19:00');
 
 ------------- Populate itinerario -------------
 -- insert into itinerario values (numerolinha, codigolog, ordem, sentido)
--- itinerario linha 10.
-insert into itinerario values (10, 1, 1, 'Centro');
-insert into itinerario values (10, 2, 2, 'Shopping Palmeiras sem mundial');
-insert into itinerario values (10, 3, 3, 'Escola Do Senhor Tatu');
-insert into itinerario values (10, 4, 4, 'Aeroporto');
-insert into itinerario values (10, 5, 5, 'TCI');
-insert into itinerario values (10, 6, 6, 'Faculdade Integradas Lumpalumpa');
+-- itinerario linha 1.
+insert into itinerario values (1, 1, 1, 'Centro');
+insert into itinerario values (1, 2, 2, 'Shopping Palmeiras sem mundial');
+insert into itinerario values (1, 3, 3, 'Escola Do Senhor Tatu');
+insert into itinerario values (1, 4, 4, 'Aeroporto');
+insert into itinerario values (1, 5, 5, 'TCI');
+insert into itinerario values (1, 6, 6, 'Faculdade Integradas Lumpalumpa');
 
--- itinerario linha 20.
-insert into itinerario values (20, 2, 1, 'Centro');
-insert into itinerario values (20, 1, 2, 'Centro');
-insert into itinerario values (20, 5, 3, 'Centro');
-insert into itinerario values (20, 3, 4, 'Centro');
-insert into itinerario values (20, 6, 5, 'Centro');
-insert into itinerario values (20, 4, 6, 'Centro');
+-- itinerario linha 2.
+insert into itinerario values (2, 2, 1, 'Centro');
+insert into itinerario values (2, 1, 2, 'Aeroporto');
+insert into itinerario values (2, 5, 3, 'Faculdade Integradas Lumpalumpa');
+insert into itinerario values (2, 3, 4, 'Shopping Palmeiras sem mundial');
+insert into itinerario values (2, 6, 5, 'TCI');
+insert into itinerario values (2, 4, 6, 'Escola Do Senhor Tatu');
 ---------------------------------------------------------------------------
