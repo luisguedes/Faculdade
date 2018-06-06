@@ -14,7 +14,7 @@ USE dbpapinitrab3
 GO
 
 
-CREATE TABLE editora (
+CREATE TABLE Editora (
 	cnpj varchar (100) not null,
 	editoranome varchar (100) not null unique,
 	pais varchar (100) not null,
@@ -26,31 +26,31 @@ CREATE TABLE editora (
 	numero int not null,
     complemento varchar (100),
 
-    constraint pkcnpj primary Key (cnpj),
-    constraint editoranome unique (editoranome),
+    constraint PK_Editora_Cnpj primary Key (cnpj),
+    constraint UNQ_EditoraNome unique (editoranome),
 );
 
 
-Create TABLE editora_telefone(
+Create TABLE EditoraTelefone(
 	cnpj_editora varchar (100) not null,
 	telefone varchar (20) not null,
     
     --conferir!
-    constraint fkcnpj_editora foreign key (cnpj_editora) references editora (cnpj),
-    constraint pkeditora_telefone primary Key (telefone),
+    constraint FK_CnpjEditora foreign key (cnpj_editora) references Editora (cnpj),
+    constraint PK_EditoraTelefone_CnpjEditora primary Key (telefone),
 );
 
-Create TABLE biblioteca_coc(
+Create TABLE Biblioteca_Coc(
 	cnpj varchar (100) not null,
 	ramal int not null,
 	website varchar (100) not null,
 
     --conferir!
-	constraint pkbiblioteca_cnpj primary Key (cnpj),
-    constraint biblioteca_ramal unique (ramal),
+	constraint PK_Biblioteca_Coc_Cnpj primary Key (cnpj),
+    constraint UNQ_BibliotecaRamal unique (ramal),
 );
 
-Create TABLE livro(
+Create TABLE Livro(
     --cnpj_editora varchar (100) not null REFERENCES editora(cnpj),
     --cnpj_biblioteca varchar (100) not null REFERENCES biblioteca_coc(cnpj),
     cnpj_editora varchar (100) not null,
@@ -60,14 +60,14 @@ Create TABLE livro(
     titulo varchar (100) not null,
     autor varchar (100) not null,
 
-    constraint fklivro_cnpj_livro foreign key (cnpj_editora) references editora (cnpj),
-    constraint fklivro_cnpj_biblioteca foreign key (cnpj_biblioteca) references biblioteca_coc (cnpj),
-    constraint pklivro primary Key (cnpj_editora, isbn),
+    constraint FK_Livro_CnpjLivro foreign key (cnpj_editora) references Editora (cnpj),
+    constraint FK_Livro_CnpjBiblioteca foreign key (cnpj_biblioteca) references Biblioteca_Coc (cnpj),
+    constraint PK_Livro primary Key (cnpj_editora, isbn),
     --constraint cnpj_editora unique (livroisbn),
 
 );
 
-Create TABLE pessoa(
+Create TABLE Pessoa(
     cnpj_biblioteca varchar (100) not null,
     codigo int IDENTITY(1,1) not null,
     nome varchar (100) not null,
@@ -81,25 +81,33 @@ Create TABLE pessoa(
 	numero int not null,
     complemento varchar (100),
     
-    constraint fkpessoa foreign key (cnpj_biblioteca) references biblioteca_coc (cnpj),
-	constraint pkpessoa primary key (codigo),
+    constraint FK_Pessoa_CnpjBiblioteca foreign key (cnpj_biblioteca) references Biblioteca_Coc (cnpj),
+	constraint PK_pessoa_Codigo primary key (codigo),
 );
 
-Create TABLE aluno(
-    codigo_pessoa int,
+Create TABLE Aluno(
+    pessoa_codigo int,
     alu_rm int,
     alu_turma varchar (100),
 
-    constraint fkaluno foreign key (codigo_pessoa) references pessoa (codigo),
-	constraint pkaluno primary key (alu_rm),
+    constraint FK_Aluno_CodigoPessoa foreign key (pessoa_codigo) references Pessoa (codigo),
+	constraint PK_Aluno_AluRm primary key (alu_rm),
 
 );
 
-Create TABLE funcionario(
-    codigo_pessoa int,
+Create TABLE Funcionario(
+    pessoa_codigo int,
     func_rt int,
     func_setor varchar (100),
     
-    constraint fkfuncionario foreign key (codigo_pessoa) references pessoa (codigo),
-	constraint pkfuncionario primary key (func_rt),
+    constraint FK_Funcionario_CodigoPessoa foreign key (pessoa_codigo) references pessoa (codigo),
+	constraint PK_Funcionario_FuncRt primary key (func_rt),
+);
+
+CREATE TABLE Log
+(
+ id int identity(1,1) NOT NULL,
+ data datetime,
+ msg varchar(max),
+ Constraint PK_Log_Id PRIMARY KEY(id)
 );
