@@ -20,3 +20,17 @@ BEGIN
 	RETURN @Result  
 END
 GO
+
+
+
+--- atualizada
+
+DECLARE @Result VARCHAR(MAX)=''
+		
+	SELECT @Result =  @Result + ', ' + telefone
+	  FROM editoratelefone
+	 WHERE editora_cnpj = '80.354.229/0001-63'
+    
+    SET @Result = SUBSTRING(@Result, 3, LEN(@Result))
+    
+	SELECT @Result
