@@ -8,8 +8,8 @@ public class Teste {
 	public static void main(String[] args) {
 
 		Carro c = new Carro();
-		c.setModelo("FORD");
-		c.setNome("KA");
+		c.setModelo("CHEVROLET");
+		c.setNome("FUSION");
 
 		CarroCtrl controle = new CarroCtrl();
 		controle.insert(c);

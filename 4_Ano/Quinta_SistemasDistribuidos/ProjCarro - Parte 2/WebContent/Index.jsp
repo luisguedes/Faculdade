@@ -23,7 +23,7 @@ table tr:nth-child(even) {
 }
 </style>
 <body>
-<div ng-app"myApp" ng-controller="customersCtrl">
+<div ng-app="myApp" ng-controller="customersCtrl">
 
 	<table>
 		<tr>
