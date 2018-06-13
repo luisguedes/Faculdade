@@ -1,7 +1,6 @@
----------------------------------------------------editora---------------------------------------------------------
 --pr_inserir_editora
 CREATE PROCEDURE PR_INSERIR_EDITORA
-	@cnpj varchar (100),
+	@cnpj bigint,
 	@editoranome varchar (100),
 	@pais varchar (100),
 	@estado varchar (100),
@@ -10,7 +9,7 @@ CREATE PROCEDURE PR_INSERIR_EDITORA
 	@logradouro varchar (100),
 	@bairro varchar (100),
 	@numero int,
-	@complemento varchar (100),
+	@complemento varchar (100)
 AS 
 BEGIN
 	INSERT INTO editora (cnpj, editoranome, pais, estado, cidade, cep, logradouro, bairro, numero, complemento)
@@ -18,10 +17,53 @@ BEGIN
 END
 GO
 --pr_select_editora
-CREATE PROCEDURE PR_SELECT_EDITORA AS 
+CREATE PROCEDURE PR_SELECT_EDITORA
+	@cnpj bigint = 0
+AS
 BEGIN
-	select cnpj, editoranome, pais, estado, cidade, cep, logradouro, bairro, numero, complemento
-     from editora
+	if (@cnpj = 0) 
+		select e.cnpj, e.editoranome,e.cidade, e.logradouro
+		from editora e
+	else
+		select *
+		from editora where cnpj = @cnpj
+END
+GO
+
+CREATE PROCEDURE PR_ATUALIZAR_EDITORA
+	@cnpj bigint,
+	@editoranome varchar (100),
+	@pais varchar (100),
+	@estado varchar (100),
+	@cidade varchar (100),
+	@cep varchar (100),
+	@logradouro varchar (100),
+	@bairro varchar (100),
+	@numero int,
+	@complemento varchar (100)
+AS 
+BEGIN
+	UPDATE editora
+	SET
+		editoranome = @editoranome,
+		pais = @pais,
+		estado = @estado,
+		cidade = @cidade,
+		cep = @cep,
+		logradouro = @logradouro,
+		bairro = @bairro,
+		numero = @numero,
+		complemento = @complemento
+	WHERE cnpj = @cnpj
+END
+GO
+
+CREATE PROCEDURE PR_DELETAR_EDITORA
+	@cnpj bigint
+AS 
+BEGIN
+	delete editora
+	where cnpj = @cnpj
 END
 GO
 
@@ -29,60 +71,79 @@ SELECT * FROM editora
 GO
 
 ---------------------------------------------editoratelefone------------------------------------------------------
-
---pr_inserir_editoratelefone
-CREATE PROCEDURE PR_INSERIR_EDITORATELEFONE
-	@editora_cnpj varchar (100),
-    @telefone varchar (20),
-AS 
-BEGIN
-	INSERT INTO editoratelefone (editora_cnpj, telefone)
-         VALUES(@editora_cnpj, @telefone)
-END
-GO
---pr_select_editoratelefone
-CREATE PROCEDURE PR_SELECT_EDITORATELEFONE AS 
-BEGIN
-	select editora_cnpj, telefone
-     from editoratelefone
-END
-GO
-
-SELECT * FROM editoratelefone
-GO
-
+/*
+NADA
+*/
 ---------------------------------------------Livro----------------------------------------------------------------
 
 --pr_inserir_livro
 CREATE PROCEDURE PR_INSERIR_LIVRO
-	@editora_cnpj varchar (100),
-	@isbn varchar (100),
+	@editora_cnpj bigint,
+	@isbn bigint,
 	@qtde int,
 	@titulo varchar (100),
 	@autor varchar (100),
+	@valor decimal
 AS 
 BEGIN
-	INSERT INTO livro (editora_cnpj, isbn, qtde, titulo, autor)
-         VALUES(@editora_cnpj, @isbn, @qtde, @titulo, @autor)
+	INSERT INTO livro (editora_cnpj, isbn, qtde, titulo, autor, valor)
+         VALUES(@editora_cnpj, @isbn, @qtde, @titulo, @autor, @valor)
 END
 GO
 --pr_select_livro
 CREATE PROCEDURE PR_SELECT_LIVRO
+	@isbn bigint = 0
 AS 
 BEGIN
-	select editora_cnpj, isbn, qtde, titulo, autor
-     from livro
+	if (@isbn = 0)
+		select e.editoranome as editora, l.isbn, l.qtde, l.titulo, l.autor
+		from livro l
+		INNER JOIN editora e ON e.cnpj = l.editora_cnpj
+	else
+		select * from livro where isbn = @isbn
+END
+GO
+
+CREATE PROCEDURE PR_ATUALIZAR_LIVRO
+	@editora_cnpj bigint,
+	@isbn bigint,
+	@qtde int,
+	@titulo varchar (100),
+	@autor varchar (100),
+	@valor decimal
+AS 
+BEGIN
+	UPDATE livro
+	SET
+		editora_cnpj = @editora_cnpj,
+		qtde = @qtde,
+		titulo = @titulo,
+		autor = @autor,
+		valor = @valor
+	WHERE isbn = @isbn
+END
+GO
+
+CREATE PROCEDURE PR_DELETAR_LIVRO
+	@isbn bigint
+AS 
+BEGIN
+	delete categoria_livro
+	where livro_isbn = @isbn
+
+	delete livro
+	where isbn = @isbn
 END
 GO
 
 SELECT * FROM livro
 GO
 
----------------------------------------------Pessoa----------------------------------------------------------------
+---------------------------------------------Cliente----------------------------------------------------------------
 
---pr_inserir_pessoa
-CREATE PROCEDURE PR_INSERIR_PESSOA
-	@cpf_cnpj int,
+--pr_inserir_cliente
+CREATE PROCEDURE PR_INSERIR_CLIENTE
+	@cpf_cnpj bigint,
 	@nome varchar (100),
 	@email varchar (100),
 	@pais varchar (100),
@@ -93,95 +154,159 @@ CREATE PROCEDURE PR_INSERIR_PESSOA
 	@bairro varchar (100),
 	@numero int,
 	@complemento varchar (100),
-	@tipo char,
-AS 
+	@tipo char
+AS
 BEGIN
-	INSERT INTO editora (cpf_cnpj, nome, email, pais, estado, cidade, cep, logradouro, bairro, numero, complemento, tipo)
+	INSERT INTO cliente (cpf_cnpj, nome, email, pais, estado, cidade, cep, logradouro, bairro, numero, complemento, tipo)
          VALUES(@cpf_cnpj, @nome, @email, @pais, @estado, @cidade, @cep, @logradouro, @bairro, @numero, @complemento, @tipo)
 END
 GO
---pr_select_pessoa
-CREATE PROCEDURE PR_SELECT_PESSOA
+--pr_select_cliente
+CREATE PROCEDURE PR_SELECT_CLIENTE
+	@cpf_cnpj bigint = 0
 AS 
 BEGIN
-	select cpf_cnpj, nome, email, pais, estado, cidade, cep, logradouro, bairro, numero, complemento, tipo
-     from pessoa
+	if (@cpf_cnpj = 0) 
+		select cpf_cnpj, nome, email, pais, estado, cidade, cep, logradouro, bairro, numero, complemento, tipo
+		from cliente
+	else
+		select cpf_cnpj, nome, email, pais, estado, cidade, cep, logradouro, bairro, numero, complemento, tipo
+		from cliente where cpf_cnpj = @cpf_cnpj
 END
 GO
 
-SELECT * FROM pessoa
-GO
-
-
----------------------------------------------cliente_Compra_Livro--------------------------------------------------
-
---pr_inserir_compra_livro
-CREATE PROCEDURE PR_INSERIR_COMPRA_LIVRO
-	cliente_id int,
-    livro_isbn int,
-    data datetime,
-    valor decimal,
+--pr_select_cliente
+CREATE PROCEDURE PR_ATUALIZAR_CLIENTE
+	@cpf_cnpj bigint,
+	@nome varchar (100),
+	@email varchar (100),
+	@pais varchar (100),
+	@estado varchar (100),
+	@cidade varchar (100),
+	@cep varchar (100),
+	@logradouro varchar (100),
+	@bairro varchar (100),
+	@numero int,
+	@complemento varchar (100),
+	@tipo char
 AS 
 BEGIN
-	INSERT INTO COMPRA_LIVRO (cliente_id, livro_isbn, data, valor)
-         VALUES(@cliente_id, @livro_isbn, @data, @valor)
+	UPDATE cliente
+	SET 
+		nome = @nome,
+		email = @email,
+		pais = @pais,
+		estado = @estado,
+		cidade = @cidade,
+		cep = @cep,
+		logradouro = @logradouro,
+		bairro = @bairro,
+		numero = @numero,
+		complemento = @complemento,
+		tipo = @tipo
+	where
+		cpf_cnpj = @cpf_cnpj
 END
 GO
---pr_select_livro
-CREATE PROCEDURE PR_SELECT_COMPRA_LIVRO
+
+CREATE PROCEDURE PR_DELETAR_CLIENTE
+	@cpf_cnpj bigint
 AS 
 BEGIN
-	select cliente_id, livro_isbn, data, valor
-     from COMPRA_LIVRO
+	delete cliente
+	where cpf_cnpj = @cpf_cnpj
 END
 GO
 
-SELECT * FROM COMPRA_LIVRO
+SELECT * FROM cliente
 GO
 
----------------------------------------------categoria------------------------------------------------------------
+---------------------------------------------Categoria_Livro------------------------------------------------------------
 
---pr_inserir_categoria
-CREATE PROCEDURE PR_INSERIR_CATEGORIA
-	@nome varchar(100),
+--pr_inserir_CATEGORIA_LIVRO
+CREATE PROCEDURE PR_INSERIR_CATEGORIA_LIVRO
+	@livro_isbn bigint,
+	@categoria varchar (100)
 AS 
 BEGIN
-	INSERT INTO categoria (nome)
-         VALUES(@nome)
+	INSERT INTO categoria_livro VALUES (@livro_isbn, @categoria)
 END
 GO
---pr_select_categoria
+--pr_select_CATEGORIA_LIVRO
+CREATE PROCEDURE PR_SELECT_CATEGORIA_LIVRO
+	@id bigint = 0
+AS 
+BEGIN
+	if (@id = 0)
+		select * from categoria_livro
+	else
+		select * from categoria_livro cl where cl.livro_isbn = @id
+END
+GO
+
+CREATE PROCEDURE PR_ATUALIZAR_CATEGORIA_LIVRO
+	@id int,
+	@livro_isbn bigint,
+	@categoria varchar (100)
+AS 
+BEGIN
+	UPDATE categoria_livro
+	SET
+		livro_isbn = @livro_isbn,
+		categoria = @categoria
+		
+	WHERE id = @id
+END
+GO
+
+CREATE PROCEDURE PR_DELETAR_CATEGORIA_LIVRO
+	@id int
+AS 
+BEGIN
+	delete Categoria_Livro
+	where id = @id
+END
+GO
+
+SELECT * FROM Categoria_Livro
+GO 
+
+---------------------------------------------categoria_nome------------------------------------------------------
+
+--pr_select_CATEGORIA_LIVRO
 CREATE PROCEDURE PR_SELECT_CATEGORIA
 AS 
 BEGIN
-	select nome
-     from categoria
+	select *
+	from categoria
 END
 GO
 
-SELECT * FROM categoria
+SELECT * FROM Categoria_Livro
 GO
 
----------------------------------------------categoria_livro------------------------------------------------------
-
---pr_inserir_categoria_livro
-CREATE PROCEDURE PR_INSERIR_CATEGORIA_LIVRO
-    @categoria_id int,
-    @livro_isbn int,
+---------------------------------------------categoria_nome------------------------------------------------------
+CREATE PROCEDURE PR_SELECT_COMPRA
 AS 
 BEGIN
-	INSERT INTO categoria_livro (nome)
-         VALUES(@nome)
-END
-GO
---pr_select_categoria_livro
-CREATE PROCEDURE PR_SELECT_CATEGORIA_LIVRO
-AS 
-BEGIN
-	select nome
-     from categoria_livro
+	select 
+		c.id as id,
+		l.titulo as titulo,
+		cl.nome as cliente,
+		l.valor as valor
+	from Cliente_Compra_Livro c
+	inner join livro l ON l.isbn = c.livro_isbn
+	inner join cliente cl ON cl.cpf_cnpj = c.cliente_id
 END
 GO
 
-SELECT * FROM categoria_livro
+CREATE PROCEDURE PR_INSERIR_COMPRA
+	@cliente_id bigint,
+	@livro_isbn bigint,
+	@data datetime
+AS 
+BEGIN
+	INSERT INTO Cliente_Compra_Livro (cliente_id, livro_isbn, data)
+	VALUES (@cliente_id, @livro_isbn, @data)
+END
 GO

@@ -15,7 +15,7 @@
 
 
     CREATE TABLE Editora (
-        cnpj varchar (100) not null,
+        cnpj bigint not null,
         editoranome varchar (100) not null unique,
         pais varchar (100) not null,
         estado varchar (100) not null,
@@ -32,7 +32,7 @@
 
 
     Create TABLE EditoraTelefone(
-        editora_cnpj varchar (100) not null,
+        editora_cnpj bigint not null,
         telefone varchar (20) not null,
         
         --conferir!
@@ -41,11 +41,12 @@
     );
 
     Create TABLE Livro(
-        editora_cnpj varchar (100) not null,
-        isbn varchar (100) not null,
+        editora_cnpj bigint not null,
+        isbn bigint not null,
         qtde int not null,
         titulo varchar (100) not null,
         autor varchar (100) not null,
+        valor decimal not null,
 
         constraint FK_Livro_EditoraCnpj foreign key (editora_cnpj) references editora (cnpj),
         constraint PK_Livro primary Key (isbn),
@@ -53,8 +54,7 @@
     );
 
     Create TABLE Cliente(
-        id int IDENTITY(1,1) not null,
-        cpf_cnpj int not null,
+        cpf_cnpj bigint not null,
         nome varchar (100) not null,
         email varchar (100) not null,
         pais varchar (100) not null,
@@ -67,39 +67,38 @@
         complemento varchar (100),
         tipo char not null,
         
-        constraint PK_cliente_Id primary key (id),
-        constraint INQ_Cliente_cpf_cnpj unique (cpf_cnpj),
+        constraint PK_cliente_Id primary key (cpf_cnpj),
         constraint INQ_Cliente_email unique (email),
     );
 
     CREATE TABLE Cliente_Compra_Livro
     (
         id int IDENTITY(1,1) not null,
-        cliente_id int not null,
-        livro_isbn varchar (100) not null,
+        cliente_id bigint not null,
+        livro_isbn bigint not null,
         data datetime not null,
-        valor decimal not null,
 
         Constraint PK_CompraLivro_Id PRIMARY KEY(id),
-        constraint FK_Cliente_Compra_Livro_ClienteId foreign key (cliente_id) references cliente (id),
-        constraint FK_Compra_Livro_Isbn foreign key (livro_isbn) references livro (isbn),
-        Constraint UNQ_CompraLivro_ClienteId unique(cliente_id),
+        constraint FK_Cliente_Compra_Livro_ClienteId foreign key (cliente_id) references cliente (cpf_cnpj),
+        constraint FK_Compra_Livro_Isbn foreign key (livro_isbn) references livro (isbn)
+    );
+
+    CREATE TABLE Categoria
+    (
+        nome varchar (100) not null PRIMARY KEY,
+    
+        --Constraint PK_Categoria_Nome_Nome PRIMARY KEY(nome),
     );
 
     CREATE TABLE Categoria_Livro
     (
         id int IDENTITY(1,1) not null,
-        livro_isbn varchar(100) not null,
-        
+        livro_isbn bigint not null,
+        categoria varchar (100) not null,
+
+        Constraint PK_Categoria_Id PRIMARY KEY(id),
         constraint FK_Categoria_Livro_Isbn foreign key (livro_isbn) references Livro (isbn),
-        Constraint PK_Categoria_Id PRIMARY KEY(id)
+        constraint FK_Categoria_Livro_Categoria_Nome foreign key (categoria) references Categoria (nome),
+        constraint INQ_Categoria_Livro unique (livro_isbn, categoria),
     );
 
-    CREATE TABLE Categoria_Nome
-    (
-        categoria_livro_id int not null,
-        categoria_nome varchar (100) not null,
-    
-        constraint FK_Categoria_Livro_Id foreign key (categoria_livro_id) references categoria_livro (id),
-        Constraint PK_Categoria_Nome_Nome PRIMARY KEY(categoria_nome),
-    );

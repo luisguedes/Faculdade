@@ -13,7 +13,7 @@ BEGIN
 		
 	SELECT @Result =  Coalesce(@Result + telefone + ', ', '')
 	  FROM editoratelefone
-	 WHERE cnpj_editora = @CNPJ
+	 WHERE editora_cnpj = @CNPJ
     
     SET @Result = SUBSTRING(@Result, 1, LEN(@Result)-1)
     
