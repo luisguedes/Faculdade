@@ -29,7 +29,7 @@ insert into Livro values ('80.354.229/0001-63', '54.828.227/0001-59', '455-69751
 insert into Livro values ('80.354.229/0001-63', '54.828.227/0001-59', '492-995345194-4', 15, 'Introdução a sistemas de bancos de dados', 'Fábio Papini');
 insert into Livro values ('80.354.229/0001-63', '54.828.227/0001-59', '471-607092597-6', 12, 'Java para Iniciantes', 'Fábio Papini');
 insert into Livro values ('93.196.755/0001-94', '54.828.227/0001-59', '248-568710756-2', 20, 'Fundamentos Pedagógicos da Educação Infantil', 'Renata Perangeli');
-insert into Livro values ('93.196.755/0001-94', '54.828.227/0001-59', '253-287989931-3', 25, 'Métodos de aprendizagem na Educação Infantil ', 'Mayara Muniz da Silva');
+insert into Livro values ('93.196.755/0001-94', '54.828.227/0001-59', '253-287989931-3', 25, 'Métodos de aprendizagem na Educação Infantil', 'Mayara Muniz da Silva');
 insert into Livro values ('98.094.349/0001-34', '54.828.227/0001-59', '702-400719158-9', 10, 'Gramática de Uso da Língua Portuguesa', 'Silvana Santoro');
 
 ------------- Populate Pessoa -------------

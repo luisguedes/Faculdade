@@ -96,7 +96,7 @@ CREATE PROCEDURE PR_SELECT_LIVRO
 AS 
 BEGIN
 	if (@isbn = 0)
-		select e.editoranome as editora, l.isbn, l.qtde, l.titulo, l.autor
+		select e.editoranome as editora, l.isbn, l.qtde, l.titulo, l.autor, l.valor
 		from livro l
 		INNER JOIN editora e ON e.cnpj = l.editora_cnpj
 	else
