@@ -65,6 +65,7 @@ CREATE TABLE Curso (
     turno varchar (100) not null,
 
     constraint PK_Curso_Id primary key (nome),
+    constraint UNQ_Curso_Turno unique (turno),
 );
 
 CREATE TABLE Lista_Disciplina
@@ -103,8 +104,9 @@ CREATE TABLE Boletim (
     p3 int,
 	
     constraint PK_Boletim_Id primary key (id),
-    constraint REF_Boletim_Pessoa_Id foreign key (aluno_ra) references aluno (ra),
+    constraint REF_Boletim_Aluno_Ra foreign key (aluno_ra) references aluno (ra),
     constraint REF_Boletim_disciplina_id foreign key (disciplina_id) references Disciplina (id),
+    constraint UNQ_Boletim_Aluno_Ra unique (aluno_ra),
 	
 );
 
