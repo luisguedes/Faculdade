@@ -114,6 +114,6 @@ Desktop.ini
 *.vsp
 *.vspx
 *.sap
-
+*.rsp
 
 # End of https://www.gitignore.io/api/openframeworks+visualstudio
