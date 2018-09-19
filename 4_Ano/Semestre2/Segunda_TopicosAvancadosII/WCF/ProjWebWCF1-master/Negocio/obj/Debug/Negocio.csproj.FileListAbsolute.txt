@@ -1,0 +1,6 @@
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Negocio\bin\Debug\Negocio.dll
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Negocio\obj\Debug\Negocio.dll
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Negocio\obj\Debug\Negocio.pdb

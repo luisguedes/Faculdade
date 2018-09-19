@@ -1,0 +1,6 @@
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\AcessoDados\bin\Debug\AcessoDados.dll
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\AcessoDados\bin\Debug\AcessoDados.pdb
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\AcessoDados\obj\Debug\AcessoDados.dll
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\AcessoDados\obj\Debug\AcessoDados.pdb

@@ -1,0 +1,6 @@
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Entidades\bin\Debug\Entidades.dll
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Entidades\obj\Debug\Entidades.dll
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\Entidades\obj\Debug\Entidades.pdb

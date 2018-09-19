@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdmvc2ModelStoreContainer" CdmEntityContainer="bdmvc2Entities5">
+    <EntitySetMapping Name="tb_empresa">
+      <EntityTypeMapping TypeName="bdmvc2Model.tb_empresa">
+        <MappingFragment StoreEntitySet="tb_empresa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="qtdfuncionarios" ColumnName="qtdfuncionarios" />
+          <ScalarProperty Name="endereço" ColumnName="endereço" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

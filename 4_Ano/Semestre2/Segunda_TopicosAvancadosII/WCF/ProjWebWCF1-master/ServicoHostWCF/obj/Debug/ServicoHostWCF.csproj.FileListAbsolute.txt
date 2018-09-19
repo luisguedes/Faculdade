@@ -1,0 +1,2 @@
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\ServicoHostWCF\obj\Debug\ServicoHostWCF.csprojAssemblyReference.cache
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\WCF\ProjWebWCF1-master\ServicoHostWCF\obj\Debug\ServicoHostWCF.csproj.CoreCompileInputs.cache
