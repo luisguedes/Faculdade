@@ -49,7 +49,6 @@ C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancado
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ProjWebWCF1\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ProjWebWCF1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ProjWebWCF1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ProjWebWCF1\obj\Debug\ProjWebWCF1.csprojAssemblyReference.cache
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ProjWebWCF1\obj\Debug\ProjWebWCF1.csproj.CoreCompileInputs.cache
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ProjWebWCF1\obj\Debug\ProjWebWCF1.csproj.CopyComplete
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ProjWebWCF1\obj\Debug\ProjWebWCF1.dll

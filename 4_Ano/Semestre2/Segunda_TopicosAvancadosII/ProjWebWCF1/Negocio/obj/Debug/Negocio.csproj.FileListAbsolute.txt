@@ -2,8 +2,11 @@ C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancado
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\bin\Debug\Negocio.pdb
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\bin\Debug\AcessoDados.dll
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\bin\Debug\Entidades.dll
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\bin\Debug\ProjWebWCF1.dll
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\bin\Debug\AcessoDados.pdb
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\bin\Debug\Entidades.pdb
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\bin\Debug\ProjWebWCF1.pdb
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\bin\Debug\ProjWebWCF1.dll.config
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\Negocio\obj\Debug\Negocio.csproj.CopyComplete

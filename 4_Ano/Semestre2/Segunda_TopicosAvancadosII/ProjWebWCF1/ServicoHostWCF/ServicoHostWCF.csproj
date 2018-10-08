@@ -65,6 +65,10 @@
       <Project>{D81A383B-E893-49A7-A702-3ED25C617E2D}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProjWebWCF1\ProjWebWCF1.csproj">
+      <Project>{2E51233B-3B28-4F1D-8D87-538F156F1439}</Project>
+      <Name>ProjWebWCF1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

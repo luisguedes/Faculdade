@@ -1,5 +1,4 @@
-﻿
-using Entidade;
+﻿using Entidade;
 using Negocio;
 using System;
 using System.Collections.Generic;
@@ -21,4 +20,4 @@ namespace ServicoHostWCF
             return boTesteCadastro.BuscarCliente(cliente);
         }
     }
-}
+}

@@ -53,6 +53,10 @@
       <Project>{C269611A-D4FF-4119-9A30-FA6B27797F9C}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProjWebWCF1\ProjWebWCF1.csproj">
+      <Project>{2E51233B-3B28-4F1D-8D87-538F156F1439}</Project>
+      <Name>ProjWebWCF1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

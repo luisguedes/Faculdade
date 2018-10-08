@@ -1,0 +1,55 @@
+﻿@model ProjAgil.tb_lab
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar</h2>
+<h5>Deseja realmente deletar esse documento?</h5>
+<div class="row lab">
+    <div class="col col-md-12">
+        <div class="row data">
+            <div class="col-md-6">
+                <h4>@Html.DisplayFor(modelItem => modelItem.nome)</h4>
+                <div class="data-block">
+                    <b>Maquinas:</b>
+                    <span>@Html.DisplayFor(model => model.qtdComputadores)</span>
+                </div>
+                <div class="data-block">
+                    <b>Limite de Alunos:</b>
+                    <span>@Html.DisplayFor(model => model.qtdAluno)</span>
+                </div>
+                <div class="data-block">
+                    <b>Projeto:</b>
+                    <span>@Html.DisplayFor(model => model.projetor)</span>
+                </div>
+
+            </div>
+            <div class="col col-md-6">
+                <div class="data-block">
+                    <b>Sistema Operacional:</b>
+                    <span>@Html.DisplayFor(model => model.sistemaOperacional)</span>
+                </div>
+                <b>Softwares:</b>
+                <ul>
+                    <li>@Html.DisplayFor(modelItem => modelItem.software1)</li>
+                    <li>@Html.DisplayFor(modelItem => modelItem.software2)</li>
+                    <li>@Html.DisplayFor(modelItem => modelItem.software3)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="pd">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+
+                <input type="submit" value="Delete" class="btn btn-block btn-lg btn-danger" />
+            }
+        </div>
+        <div>
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-block btn-lg btn-primary" })
+        </div>
+    </div>
+</div>
+Digite uma mensagem...

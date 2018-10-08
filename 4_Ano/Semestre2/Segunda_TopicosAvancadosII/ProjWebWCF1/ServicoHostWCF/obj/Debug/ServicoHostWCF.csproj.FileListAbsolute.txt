@@ -3,9 +3,12 @@ C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancado
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\bin\Debug\ServicoHostWCF.pdb
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\bin\Debug\Entidades.dll
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\bin\Debug\Negocio.dll
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\bin\Debug\ProjWebWCF1.dll
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\bin\Debug\AcessoDados.dll
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\bin\Debug\Entidades.pdb
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\bin\Debug\Negocio.pdb
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\bin\Debug\ProjWebWCF1.pdb
+C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\bin\Debug\ProjWebWCF1.dll.config
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\bin\Debug\AcessoDados.pdb
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\obj\Debug\ServicoHostWCF.csprojAssemblyReference.cache
 C:\Users\Luis\Documents\GitHub\Faculdade\4_Ano\Semestre2\Segunda_TopicosAvancadosII\ProjWebWCF1\ServicoHostWCF\obj\Debug\ServicoHostWCF.csproj.CoreCompileInputs.cache
